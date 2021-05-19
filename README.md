@@ -1,6 +1,7 @@
 # Principal Component Hierarchy for Sparse Quadratic Programs
 Authors: Robbie Vreugdenhil, Viet Anh Nguyen, Arman Eftekhari, Peyman Mohajerin Esfahani 
-Featured at ICML 2021
+
+Proceedings of the 38th International Conference on Machine Learning, PMLR 139, 2021. Copyright 2021 by the author(s).
 
 This folder contains the source code for the experiments in the paper.
 
