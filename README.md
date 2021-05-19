@@ -42,11 +42,9 @@ The test.m file contains a simple example of BR and DP on a synthetic dataset.
 
 ### Sparse Regression
 
-The folder __'/compare_sparse_regression'__ contains the code for the comparison of BR and DP to the warm start, screening, Beck alg 7 and the KDD method. 
+The folder __'/compare_sparse_regression'__ contains the code for the comparison of BR and DP to the warm start (Bertsimas & Van Parys 2017), screening (Atamturk & Gomez 2020), Beck alg 7 (Beck and Eldar 2012) and the KDD method (Yuan et al. 2020). 
 
-- The warm start and screening implementation are listed in the __'/src/warmstart'__ and __'/src/screening'__.
-- The implementation of the method by Beck and Eldar is listed in __'/src/beck'__
-- The method by Yuan et al. is listed in __'/src/KDD'__
+- The implementation of warm start, screening and Beck Alg 7 and the KDD method are listed in the __'/src/warmstart'__ , __'/src/screening'__ , __'/src/beck'__ and __'/src/KDD'__.
 
 The __'/compare_sparse_regression/different_k'__ folder gives a comparison between BR and DP for different values of k, where k is described in the paper. 
 
