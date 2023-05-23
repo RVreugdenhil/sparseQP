@@ -144,11 +144,10 @@ for j = 1:replications
 
         % Method of Yuan et al. copied from the authors Github
         tic
-        [A,C] = getFisher_AC(X,Y,mean(Y));
-        opt_A = -A;
-        opt_C = C;
-        HandleObj = @(x)ComputeMainObj(x,opt_A,opt_C,sparsity);
-        [x,his,tt] = DEC(opt_A,opt_C,sparsity,[6,6],1);
+        Alg = @(sparsity,c,Q,x0)BlockDecAlg_c(eps*randn(size(x0)),Q,c,sparsity,[12;6],0);
+        x0 = randn(size(Q,2),1); 
+        HandleObj = @(x)0.5*norm(Q*proj_l0(x,k)-c,'fro')^2;
+        [x,his]  = Alg8(sparsity,c,Q,x0); 
         Ikdd = find(x);
         x_kdd = zeros(n,1);
         x_kdd(Ikdd) = -0.5*inv(eye(length(Ikdd))/eta+Q(Ikdd,Ikdd))*c(1,Ikdd)';
